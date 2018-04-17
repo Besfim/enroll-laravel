@@ -1,0 +1,42 @@
+localhost:80 {
+    root ./public
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+}
+muyu.ngrok.cc:80 {
+    root ./public
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+}
+127.0.0.1:80 {
+    root ./public
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+}
+:80 {
+    root ./public
+    fastcgi / 127.0.0.1:9000 php
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+}
+#http://ngrok.muyuchengfeng.top:8080 {
+#	root ./public
+#    fastcgi / 127.0.0.1:9000 php
+#    rewrite {
+#        to {path} {path}/ /index.php?{query}
+#    }
+#}
+#http://ngrok.moodrain.cn:8080 {
+#	root ./public
+#    fastcgi / 127.0.0.1:9000 php
+#    rewrite {
+#        to {path} {path}/ /index.php?{query}
+#    }
+#}
